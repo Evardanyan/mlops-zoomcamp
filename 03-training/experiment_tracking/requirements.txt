@@ -1,0 +1,11 @@
+mlflow
+#jupyter
+#scikit-learn 
+#pandas
+#seaborn
+#hyperopt
+#xgboost
+
+# conda install -c conda-forge mlflow=1.7.1
+# conda activate exp-tracking-env
+# mlflow ui --backend-store-uri sqlite:///mlflow.db
