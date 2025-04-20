@@ -1,0 +1,12 @@
+mlflow
+#jupyter
+#scikit-learn 
+#pandas
+#seaborn
+#hyperopt
+#xgboost
+
+# conda install -c conda-forge mlflow=1.7.1
+# conda activate exp-tracking-env
+# mlflow ui --backend-store-uri sqlite:///mlflow.db
+# LD_PRELOAD=$CONDA_PREFIX/lib/libstdc++.so.6 python train.py --data_path ./output

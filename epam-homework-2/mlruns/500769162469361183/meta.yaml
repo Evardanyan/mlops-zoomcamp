@@ -1,0 +1,6 @@
+artifact_location: file:///home/vagrant/mlops-zoomcamp/epam-homework-2/mlruns/500769162469361183
+creation_time: 1745179054627
+experiment_id: '500769162469361183'
+last_update_time: 1745179054627
+lifecycle_stage: active
+name: green-taxi-experiment
