@@ -55,9 +55,26 @@ blocks:
   color: null
   configuration:
     file_source:
+      path: epam_homework_03/markdowns/loaded_records.md
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: markdown
+  name: loaded records
+  retry_config: null
+  status: updated
+  timeout: null
+  type: markdown
+  upstream_blocks: []
+  uuid: loaded_records
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    file_source:
       path: epam_homework_03/transformers/transformer.py
   downstream_blocks:
-  - training_model
+  - training_model_2
   executor_config: null
   executor_type: local_python
   has_callback: false
@@ -74,37 +91,39 @@ blocks:
   color: null
   configuration:
     file_source:
-      path: epam_homework_03/markdowns/loaded_data_size.md
+      path: epam_homework_03/markdowns/loaded_date_size_after_preparation.md
   downstream_blocks: []
   executor_config: null
   executor_type: local_python
   has_callback: false
   language: markdown
-  name: loaded_data_size
+  name: loaded date size after preparation
   retry_config: null
   status: updated
   timeout: null
   type: markdown
   upstream_blocks: []
-  uuid: loaded_data_size
+  uuid: loaded_date_size_after_preparation
 - all_upstream_blocks_executed: true
   color: null
   configuration:
+    file_path: epam_homework_03/data_exporters/training_model_2.py
     file_source:
-      path: epam_homework_03/data_exporters/training_model.py
-  downstream_blocks: []
+      path: epam_homework_03/data_exporters/training_model_2.py
+  downstream_blocks:
+  - register_model_2
   executor_config: null
   executor_type: local_python
   has_callback: false
   language: python
-  name: training_model
+  name: training_model_2
   retry_config: null
   status: executed
   timeout: null
   type: data_exporter
   upstream_blocks:
   - transformer
-  uuid: training_model
+  uuid: training_model_2
 - all_upstream_blocks_executed: true
   color: null
   configuration:
@@ -122,6 +141,42 @@ blocks:
   type: markdown
   upstream_blocks: []
   uuid: train_model_intercept
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    file_path: epam_homework_03/data_exporters/register_model_2.py
+    file_source:
+      path: epam_homework_03/data_exporters/register_model_2.py
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: register_model_2
+  retry_config: null
+  status: executed
+  timeout: null
+  type: data_exporter
+  upstream_blocks:
+  - training_model_2
+  uuid: register_model_2
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    file_source:
+      path: epam_homework_03/markdowns/model_size.md
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: markdown
+  name: model size
+  retry_config: null
+  status: updated
+  timeout: null
+  type: markdown
+  upstream_blocks: []
+  uuid: model_size
 cache_block_output_in_memory: false
 callbacks: []
 concurrency_config: {}

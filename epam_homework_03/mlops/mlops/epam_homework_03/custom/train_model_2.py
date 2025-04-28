@@ -1,5 +1,5 @@
-if 'data_exporter' not in globals():
-    from mage_ai.data_preparation.decorators import data_exporter
+if 'transformer' not in globals():
+    from mage_ai.data_preparation.decorators import transformer
 
 import pandas as pd
 from sklearn.feature_extraction import DictVectorizer
@@ -7,8 +7,8 @@ from sklearn.linear_model import LinearRegression
 
 
 
-@data_exporter
-def export_data(data, *args, **kwargs):
+@transformer
+def transform_custom(data, *args, **kwargs):
     """
     Exports data to some source.
 
@@ -22,8 +22,8 @@ def export_data(data, *args, **kwargs):
     """
     # Specify your data exporting logic here
 
-    print('DEBUG:', type(data))  # <-- This prints <class 'pandas.DataFrame'>
-
+    print('DEBUG:', type(data))
+    
     categorical = ['PULocationID', 'DOLocationID']
     train_dicts = data[categorical].to_dict(orient='records')
 

@@ -8,7 +8,7 @@
 
 export PROJECT_NAME=mlops
 export MAGE_CODE_PATH=/home/src
-export  SMTP_EMAIL= 
-export  SMTP_PASSWORD=
+export  SMTP_EMAIL=topsonic3128@yahoo.com
+export  SMTP_PASSWORD=password
 export PYTHONPATH="/home/src/mlops:${PYTHONPATH}"
 docker compose up
