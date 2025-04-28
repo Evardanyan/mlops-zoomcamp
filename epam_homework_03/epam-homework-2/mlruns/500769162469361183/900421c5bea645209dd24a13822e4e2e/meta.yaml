@@ -1,0 +1,15 @@
+artifact_uri: file:///home/vagrant/mlops-zoomcamp/epam-homework-2/mlruns/500769162469361183/900421c5bea645209dd24a13822e4e2e/artifacts
+end_time: 1745179336717
+entry_point_name: ''
+experiment_id: '500769162469361183'
+lifecycle_stage: active
+run_id: 900421c5bea645209dd24a13822e4e2e
+run_name: painted-deer-660
+run_uuid: 900421c5bea645209dd24a13822e4e2e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745179318336
+status: 3
+tags: []
+user_id: vagrant

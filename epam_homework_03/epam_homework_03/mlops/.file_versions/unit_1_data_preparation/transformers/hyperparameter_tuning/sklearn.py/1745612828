@@ -1,0 +1,34 @@
+from mage_ai.data_preparation.shared.global_data_product import fetch_global_data_product_output
+
+@transformer
+def hyperparameter_tuning(
+    training_set,
+    model_class_name: str,
+    *args,
+    **kwargs,
+) -> Tuple[
+    Dict[str, Union[bool, float, int, str]],
+    csr_matrix,
+    Series,
+    Callable[..., BaseEstimator],
+]:
+    # If training_set is a string, fetch the full output
+    if isinstance(training_set, str):
+        training_set = fetch_global_data_product_output(training_set)
+
+    # Now you can safely unpack
+    X, X_train, X_val, y, y_train, y_val, _ = training_set['build']
+
+    model_class = load_class(model_class_name)
+
+    hyperparameters = tune_hyperparameters(
+        model_class,
+        X_train=X_train,
+        y_train=y_train,
+        X_val=X_val,
+        y_val=y_val,
+        max_evaluations=kwargs.get('max_evaluations'),
+        random_state=kwargs.get('random_state'),
+    )
+
+    return hyperparameters, X, y, dict(cls=model_class, name=model_class_name)
