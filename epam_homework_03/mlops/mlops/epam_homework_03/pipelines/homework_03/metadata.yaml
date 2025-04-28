@@ -1,0 +1,149 @@
+blocks:
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    file_source:
+      path: epam_homework_03/markdowns/run_mage.md
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: markdown
+  name: Run Mage
+  retry_config: null
+  status: updated
+  timeout: null
+  type: markdown
+  upstream_blocks: []
+  uuid: run_mage
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    file_source:
+      path: epam_homework_03/markdowns/createing_project_homework_03.md
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: markdown
+  name: Createing project homework_03
+  retry_config: null
+  status: updated
+  timeout: null
+  type: markdown
+  upstream_blocks: []
+  uuid: createing_project_homework_03
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    file_source:
+      path: epam_homework_03/data_loaders/ingest.py
+  downstream_blocks:
+  - transformer
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: ingest
+  retry_config: null
+  status: executed
+  timeout: null
+  type: data_loader
+  upstream_blocks: []
+  uuid: ingest
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    file_source:
+      path: epam_homework_03/transformers/transformer.py
+  downstream_blocks:
+  - training_model
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: transformer
+  retry_config: null
+  status: executed
+  timeout: null
+  type: transformer
+  upstream_blocks:
+  - ingest
+  uuid: transformer
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    file_source:
+      path: epam_homework_03/markdowns/loaded_data_size.md
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: markdown
+  name: loaded_data_size
+  retry_config: null
+  status: updated
+  timeout: null
+  type: markdown
+  upstream_blocks: []
+  uuid: loaded_data_size
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    file_source:
+      path: epam_homework_03/data_exporters/training_model.py
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: training_model
+  retry_config: null
+  status: executed
+  timeout: null
+  type: data_exporter
+  upstream_blocks:
+  - transformer
+  uuid: training_model
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    file_source:
+      path: epam_homework_03/markdowns/train_model_intercept.md
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: markdown
+  name: train_model_intercept
+  retry_config: null
+  status: updated
+  timeout: null
+  type: markdown
+  upstream_blocks: []
+  uuid: train_model_intercept
+cache_block_output_in_memory: false
+callbacks: []
+concurrency_config: {}
+conditionals: []
+created_at: '2025-04-28 15:09:42.101250+00:00'
+data_integration: null
+description: epam homework 03
+executor_config: {}
+executor_count: 1
+executor_type: null
+extensions: {}
+name: homework_03
+notification_config: {}
+remote_variables_dir: null
+retry_config: {}
+run_pipeline_in_one_process: false
+settings:
+  triggers: null
+spark_config: {}
+tags:
+- epam
+type: python
+uuid: homework_03
+variables_dir: /home/src/mage_data/epam_homework_03
+widgets: []
