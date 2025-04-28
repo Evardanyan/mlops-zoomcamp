@@ -1,0 +1,14 @@
+triggers:
+- description: null
+  envs: []
+  last_enabled_at: null
+  name: GLOBAL_DATA_PRODUCT_TRIGGER
+  pipeline_uuid: data_preparation
+  schedule_interval: null
+  schedule_type: time
+  settings: null
+  sla: null
+  start_time: null
+  status: active
+  token: null
+  variables: null
