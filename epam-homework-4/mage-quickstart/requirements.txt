@@ -1,0 +1,16 @@
+#fastparquet
+graphviz
+hyperopt
+jupyter
+pandas==1.5.3
+# scikit-learn==1.5.0
+scikit-learn==1.5.0
+seaborn
+shap
+xgboost
+
+# Mage core and compatible Dask version
+mage-ai[full]==0.9.76
+dask<2023.3.0
+pyarrow
+scipy
