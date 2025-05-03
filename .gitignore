@@ -173,3 +173,8 @@ cython_debug/
 # PyPI configuration file
 .pypirc
 **/model.bin
+# Optional: ignore all outputs from Mage pipelines
+**/mlops_batch_inference/pipelines/**/output_*/
+# Ignore Mage outputs and large data files
+# Ignore Mage .variables output files
+epam-homework-4/mage-quickstart/mage_data/**/.variables/**/data.parquet
