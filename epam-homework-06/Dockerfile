@@ -1,0 +1,16 @@
+FROM python:3.10.9-slim
+
+RUN pip install -U pip & pip install pipenv
+
+WORKDIR /app
+
+COPY [ "Pipfile", "Pipfile.lock", "./" ]
+
+RUN pipenv install --system --deploy
+
+COPY [ "batch.py", "batch.py" ]
+COPY [ "model.bin", "model.bin" ]
+
+RUN mkdir -p /app/output
+
+ENTRYPOINT [ "python", "batch.py" ]
